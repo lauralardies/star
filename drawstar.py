@@ -25,36 +25,29 @@ def star():
 
         turtle.end_fill()
         turtle.done()
-        
-    turtle.colormode(255)
-    turtle.getscreen().bgcolor(100,149,237)
-    turtle.title("My Star Drawing")
-    turtle.shape("turtle")
-    turtle.color((205,190,112),(255,236,139))
-    turtle.width(3)
-    turtle.hideturtle()
-    turtle.penup()
-
+    
     while True:
+        turtle.colormode(255)
+        turtle.getscreen().bgcolor(100,149,237)
+        turtle.title("My Star Drawing")
+        turtle.shape("turtle")
+        turtle.color((205,190,112),(255,236,139))
+        turtle.width(3)
+        turtle.hideturtle()
+        turtle.penup()
+
         num = turtle.textinput("Draw your star!", "How many points does your star have?")
+
         if num.isdigit() == True:
             num = int(num)
             
             if num <= 4:
+                turtle.clear()   
                 turtle.goto(20, 140)
                 turtle.write("You can't draw a star with\na number smaller than 5.", font=("Futura", 15, "bold italic"))
 
             else:
-                turtle.clear()        
-                turtle.colormode(255)
-                turtle.getscreen().bgcolor(100,149,237)
-                turtle.title("My Star Drawing")
-                turtle.shape("turtle")
-                turtle.color((205,190,112),(255,236,139))
-                turtle.width(3)
-                turtle.hideturtle()
-                turtle.penup()
-
+                turtle.clear()   
                 if num == 6:
                     angle = 120
                 else:
@@ -69,6 +62,8 @@ def star():
                 draw(num, angle, size = 300)
             
         else:
-            print("This is not a number! Please introduce a valid answer.")
+            turtle.clear()   
+            turtle.goto(20, 140)
+            turtle.write("This is not a number!\nPlease introduce a valid\nanswer.", font=("Futura", 15, "bold italic"))
 
 star()
