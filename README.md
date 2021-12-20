@@ -10,6 +10,7 @@ El diagrama de flujo que tenemos en nuestro código es el siguiente:
 <br>
 <img height="400" src="https://github.com/lauralardies/star/blob/main/Star.jpg" />
 <br>
+
 ```
 import turtle
 
